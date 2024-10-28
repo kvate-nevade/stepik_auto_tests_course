@@ -15,13 +15,11 @@ try:
     result = str(int(num_1) + int(num_2))
     select = Select(driver.find_element(By.TAG_NAME, 'select'))
     select.select_by_visible_text(result)
-
     driver.find_element(By.CSS_SELECTOR, '[class="btn btn-default"]').click()
 
-#28.96868418067316
-#28.968684205535574
 except Exception as ex:
     print(ex)
+
 finally:
     sleep(32)
     driver.close()

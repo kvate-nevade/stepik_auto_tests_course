@@ -1,12 +1,12 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from time import sleep
 import math
 
 driver = webdriver.Chrome()
 
 link = 'http://suninjuly.github.io/redirect_accept.html'
+
 
 try:
     driver.fullscreen_window
@@ -17,8 +17,6 @@ try:
     print(x)
     driver.find_element(By.ID, 'answer').send_keys(math.log(abs(12*math.sin(int(x)))))
     driver.find_element(By.CSS_SELECTOR, 'button[class="btn btn-primary"]').click()
-
-
 
 except Exception as ex:
     print(ex)

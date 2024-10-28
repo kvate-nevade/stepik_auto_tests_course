@@ -8,7 +8,6 @@ import math
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(service = Service('chromedriver.exe'), options=options)
 
-
 link = 'http://suninjuly.github.io/get_attribute.html'
 
 

@@ -4,14 +4,11 @@ from selenium.webdriver.chrome.service import Service
 import time
 import math
 
-
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(service = Service('chromedriver.exe'), options=options)
 
 def calc(x):
     return str(math.log(abs(12*math.sin(int(x)))))
-
-
 
 try:
     driver.get("https://suninjuly.github.io/get_attribute.html")
