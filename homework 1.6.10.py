@@ -2,16 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
 
-link = "http://suninjuly.github.io/registration1.html"
+link = "http://suninjuly.github.io/registration2.html"
 browser = webdriver.Chrome()
 browser.get(link)
 
 
 try: 
     # Ваш код, который заполняет обязательные поля
-    browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your first name"]').send_keys("Kirill")
-    browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your last name"]').send_keys("Anoshko")
-    browser.find_element(By.CSS_SELECTOR, '[placeholder="Input your email"]').send_keys("akw98@ya.ru")
+    browser.find_element(By.CSS_SELECTOR, '.first_block .form-control.first').send_keys("Kirill")
+    browser.find_element(By.CSS_SELECTOR, '.first_block .form-control.second').send_keys("Anoshko")
+    browser.find_element(By.CSS_SELECTOR, '.first_block .form-control.third').send_keys("akw98@ya.ru")
     # Отправляем заполненную форму
     button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
